@@ -13,14 +13,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class MainController {
-    @FXML
-    private Button buttonTambahKedai;
 
     @FXML
-    public void tambahKedaiClicked(ActionEvent actionEvent) throws IOException {
-        Stage primaryStage = (Stage) buttonTambahKedai.getScene().getWindow();
-        Parent newRoot = FXMLLoader.load(getClass().getResource("../resources/view/tambahKedai.fxml"));
-        primaryStage.getScene().setRoot(newRoot);
-    }
+    private SidebarController sidebarTemplateController;
+
 
 }
