@@ -169,7 +169,7 @@
                               <Font name="Poppins Regular" size="14.0" />
                            </font>
                         </TextField>
-                        <Button layoutX="446.0" layoutY="418.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="114.0" style="-fx-background-color: BA1414;" text="Tambah" textFill="WHITE">
+                        <Button onAction="#tambahKedaiButton" layoutX="446.0" layoutY="418.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="114.0" style="-fx-background-color: BA1414;" text="Tambah" textFill="WHITE">
                            <font>
                               <Font name="Poppins SemiBold" size="16.0" />
                            </font>
