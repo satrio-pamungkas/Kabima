@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="mainContainer" prefHeight="530.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.MainController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+            <SplitPane dividerPositions="0.2601880877742947" prefHeight="505.0" prefWidth="810.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: FEFFF1;">
+                     <children>
+                        <Polygon fill="#7a1212" layoutX="132.0" layoutY="438.0" points="-132.0, 66.0, 76.0, -186.5, 76.0, 65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Polygon fill="#ba1414" layoutX="131.0" layoutY="441.0" points="-132.0, 66.0, -132.0, -100.0, 76.0, 65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Text fill="#ba1414" layoutX="78.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KaBiMa">
+                           <font>
+                              <Font name="Open Sans Bold" size="25.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="38.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="img/logo.png" />
+                           </image>
+                        </ImageView>
+                        <Line endX="80.33332824707031" layoutX="109.0" layoutY="67.0" startX="-79.0" strokeWidth="0.5" />
+                        <Button fx:id="buttonTambahKedai" onAction="#tambahKedaiClicked" layoutX="-11.0" layoutY="87.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="222.0" style="-fx-background-color: FEFFF1;">
+                           <graphic>
+                              <Text fill="#ba1414" strokeType="OUTSIDE" strokeWidth="0.0" text="Kedai" wrappingWidth="51.01858997344971">
+                                 <font>
+                                    <Font name="Open Sans SemiBold" size="15.0" />
+                                 </font>
+                              </Text>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="-12.0" layoutY="126.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="222.0" style="-fx-background-color: FEFFF1;">
+                           <graphic>
+                              <Text fill="#ba1414" strokeType="OUTSIDE" strokeWidth="0.0" text="Detail Order" textAlignment="RIGHT" wrappingWidth="129.01859378814697">
+                                 <font>
+                                    <Font name="Open Sans SemiBold" size="15.0" />
+                                 </font>
+                              </Text>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="-11.0" layoutY="166.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="222.0" style="-fx-background-color: FEFFF1;">
+                           <graphic>
+                              <Text fill="#ba1414" strokeType="OUTSIDE" strokeWidth="0.0" text="Riwayat" textAlignment="RIGHT" wrappingWidth="60.35193347930908">
+                                 <font>
+                                    <Font name="Open Sans SemiBold" size="15.0" />
+                                 </font>
+                              </Text>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #FFF;">
+                     <children>
+                        <Pane prefHeight="51.0" prefWidth="595.0" style="-fx-background-color: FEFFF1;">
+                           <effect>
+                              <DropShadow height="21.01" radius="4.7525" width="0.0" />
+                           </effect>
+                           <children>
+                              <Text layoutX="210.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kedai">
+                                 <font>
+                                    <Font name="Poppins Regular" size="22.0" />
+                                 </font></Text>
+                              <Text fill="#ba1414" layoutX="278.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KaBiMa">
+                                 <font>
+                                    <Font name="Open Sans Bold" size="22.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <TextField layoutX="34.0" layoutY="78.0" prefHeight="30.0" prefWidth="456.0" promptText="Cari nama kedai">
+                           <font>
+                              <Font name="Poppins Regular" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button layoutX="505.0" layoutY="76.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="65.0" style="-fx-background-color: BA1414;" text="Cari" textFill="WHITE">
+                           <font>
+                              <Font name="Poppins SemiBold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
