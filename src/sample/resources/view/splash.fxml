@@ -32,27 +32,23 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Polygon?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="530.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.TambahKedaiController">
+<VBox prefHeight="530.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.SplashController" stylesheets="@../css/style.css">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -95,57 +91,48 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
-        <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
-          <font>
-            <Font size="18.0" />
-          </font>
-        </Label>
-            <SplitPane dividerPositions="0.2601880877742947" prefHeight="505.0" prefWidth="810.0">
+
+            <SplitPane prefHeight="505.0" prefWidth="810.0">
               <items>
-              <fx:include fx:id="sidebarTemplate" source="sidebar.fxml"/>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #FFF;">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: FEFFF1;">
                      <children>
-                        <Pane prefHeight="51.0" prefWidth="595.0" style="-fx-background-color: FEFFF1;">
-                           <effect>
-                              <DropShadow height="21.01" radius="4.7525" width="0.0" />
-                           </effect>
-                           <children>
-                              <Text layoutX="210.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kedai">
-                                 <font>
-                                    <Font name="Poppins Regular" size="22.0" />
-                                 </font></Text>
-                              <Text fill="#ba1414" layoutX="278.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KaBiMa">
-                                 <font>
-                                    <Font name="Open Sans Bold" size="22.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </Pane>
-                        <TextField fx:id="inputNamaKedai" layoutX="36.0" layoutY="148.0" prefHeight="30.0" prefWidth="246.0" promptText="Masukan nama kedai">
+                        <Button onAction="#masukClicked" id="button-masuk" fx:id="buttonMasuk" layoutX="337.0" layoutY="318.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="135.0" style="-fx-background-color: #BA1414; -fx-background-radius: 7;" text="Masuk" textFill="WHITE">
                            <font>
-                              <Font name="Poppins Regular" size="14.0" />
-                           </font>
-                        </TextField>
-                        <Button onAction="#tambahKedaiButton" layoutX="446.0" layoutY="418.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="114.0" style="-fx-background-color: BA1414;" text="Tambah" textFill="WHITE">
-                           <font>
-                              <Font name="Poppins SemiBold" size="16.0" />
+                              <Font name="Poppins SemiBold" size="14.0" />
                            </font>
                         </Button>
-                        <Text fill="#ba1414" layoutX="195.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tambah Kedai">
+                        <Group layoutX="132.0" layoutY="149.0">
+                           <children>
+                              <Polygon fill="#7a1212" layoutY="20.0" points="-132.0, 109.0, -132.0, -103.0, -92.0, 109.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                              <Polygon fill="#7a1212" layoutY="288.0" points="-132.0, 66.0, -132.0, -103.0, 75.0, 66.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                              <Polygon fill="#ba1414" layoutX="-49.376861572265625" layoutY="155.7353057861328" points="-2.0, -14.0, -83.3768539428711, -68.26469421386719, -83.37686157226562, 144.05450439453125" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Polygon>
+                           </children>
+                        </Group>
+                        <Group layoutX="524.0" layoutY="-64.0">
+                           <children>
+                              <Polygon fill="#7a1212" layoutX="376.0" layoutY="392.0" points="-132.0, 109.0, -132.0, -103.0, -92.0, 109.0" rotate="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                              <Polygon fill="#7a1212" layoutX="208.0" layoutY="167.0" points="-132.0, 65.0, -132.0, -103.0, 76.0, 65.0" rotate="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                              <Polygon fill="#ba1414" layoutX="286.0" layoutY="184.0" points="-2.0, -14.0, -83.3768539428711, -68.26469421386719, -83.37686157226562, 144.05450439453125" rotate="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Polygon>
+                           </children>
+                        </Group>
+                        <ImageView fitHeight="100.0" fitWidth="90.0" layoutX="350.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/logo.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#ba1414" layoutX="319.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KaBiMa">
                            <font>
-                              <Font name="Open Sans Bold" size="26.0" />
+                              <Font name="Open Sans Bold" size="45.0" />
                            </font>
                         </Text>
-                        <TextField fx:id="inputKategoriKedai" layoutX="314.0" layoutY="148.0" prefHeight="30.0" prefWidth="246.0" promptText="Masukan kategori">
-                           <font>
-                              <Font name="Poppins Regular" size="14.0" />
-                           </font>
-                        </TextField>
-                        <TextArea fx:id="inputDeskripsiKedai" layoutX="36.0" layoutY="212.0" prefHeight="146.0" prefWidth="524.0" promptText="Masukan deskripsi singkat kedai">
-                           <font>
-                              <Font name="Poppins Regular" size="14.0" />
-                           </font>
-                        </TextArea>
                      </children>
                   </AnchorPane>
               </items>

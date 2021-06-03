@@ -10,7 +10,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("resources/view/main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("resources/view/splash.fxml"));
         primaryStage.setTitle("Aplikasi KaBiMa");
         primaryStage.setScene(new Scene(root, 810, 530));
         primaryStage.setResizable(false);
