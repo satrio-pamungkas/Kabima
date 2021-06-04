@@ -11,12 +11,22 @@ import java.io.IOException;
 
 public class SidebarController {
     @FXML
-    private Button buttonTambahKedai;
+    public Button buttonTambahProduk;
+
+    @FXML
+    public Button buttonTambahKedai;
 
     @FXML
     public void tambahKedaiClicked(ActionEvent actionEvent) throws IOException {
         Stage primaryStage = (Stage) buttonTambahKedai.getScene().getWindow();
         Parent newRoot = FXMLLoader.load(getClass().getResource("../resources/view/tambahKedai.fxml"));
+        primaryStage.getScene().setRoot(newRoot);
+    }
+
+    @FXML
+    public void tambahProdukClicked(ActionEvent actionEvent) throws IOException {
+        Stage primaryStage = (Stage) buttonTambahProduk.getScene().getWindow();
+        Parent newRoot = FXMLLoader.load(getClass().getResource("../resources/view/tambahProduk.fxml"));
         primaryStage.getScene().setRoot(newRoot);
     }
 }

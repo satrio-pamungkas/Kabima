@@ -33,7 +33,7 @@
                 </Text>
             </graphic>
         </Button>
-        <Button styleClass="button-sidebar" layoutX="-12.0" layoutY="126.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="222.0" style="-fx-background-color: FEFFF1;">
+        <Button fx:id="buttonTambahProduk" styleClass="button-sidebar" onAction="#tambahProdukClicked" layoutX="-12.0" layoutY="126.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="222.0" style="-fx-background-color: FEFFF1;">
             <graphic>
                 <Text fill="#ba1414" strokeType="OUTSIDE" strokeWidth="0.0" text="Tambah Produk" textAlignment="RIGHT" wrappingWidth="129.01859378814697">
                     <font>
