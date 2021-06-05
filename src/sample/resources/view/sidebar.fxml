@@ -13,7 +13,7 @@
 
 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="bgAnchor-yellow" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" style="-fx-background-color: FEFFF1;" fx:controller="sample.controller.SidebarController" stylesheets="@../css/style.css">
     <children>
-        <Polygon fill="#7a1212" layoutX="132.0" layoutY="438.0" points="-132.0, 66.0, 76.0, -186.5, 76.0, 65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Polygon fill="#7a1212" layoutX="132.0" layoutY="438.0" points="-132.0, 66.0, 76.0, -161.0, 76.0, 65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
         <Polygon fill="#ba1414" layoutX="131.0" layoutY="441.0" points="-132.0, 66.0, -132.0, -100.0, 76.0, 65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
             <effect>
                 <DropShadow />
@@ -79,6 +79,20 @@
                     </image>
                 </ImageView>
                 <Text fill="#ba1414" strokeType="OUTSIDE" strokeWidth="0.0" text="Hapus" wrappingWidth="135.0185899734497">
+                    <font>
+                        <Font name="Open Sans SemiBold" size="13.0" />
+                    </font>
+                </Text>
+            </buttons>
+        </ButtonBar>
+        <ButtonBar layoutY="239.0" prefHeight="38.0" prefWidth="208.0" styleClass="btn-sidebar">
+            <buttons>
+                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/edit.png" />
+                    </image>
+                </ImageView>
+                <Text fill="#ba1414" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit" wrappingWidth="135.0185899734497">
                     <font>
                         <Font name="Open Sans SemiBold" size="13.0" />
                     </font>
