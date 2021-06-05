@@ -5,28 +5,31 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBar;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class SidebarController {
     @FXML
-    public Button buttonTambahProduk;
+    public ButtonBar buttonBeranda;
+    
+    @FXML
+    public ButtonBar buttonTambah;
 
     @FXML
-    public Button buttonTambahKedai;
-
-    @FXML
-    public void tambahKedaiClicked(ActionEvent actionEvent) throws IOException {
-        Stage primaryStage = (Stage) buttonTambahKedai.getScene().getWindow();
-        Parent newRoot = FXMLLoader.load(getClass().getResource("../resources/view/tambahKedai.fxml"));
+    public void buttonBerandaClicked(MouseEvent mouseEvent) throws IOException {
+        Stage primaryStage = (Stage) buttonBeranda.getScene().getWindow();
+        Parent newRoot = FXMLLoader.load(getClass().getResource("../resources/view/main.fxml"));
         primaryStage.getScene().setRoot(newRoot);
     }
 
     @FXML
-    public void tambahProdukClicked(ActionEvent actionEvent) throws IOException {
-        Stage primaryStage = (Stage) buttonTambahProduk.getScene().getWindow();
-        Parent newRoot = FXMLLoader.load(getClass().getResource("../resources/view/tambahProduk.fxml"));
+    public void buttonTambahClicked(MouseEvent mouseEvent) throws IOException {
+        Stage primaryStage = (Stage) buttonTambah.getScene().getWindow();
+        Parent newRoot = FXMLLoader.load(getClass().getResource("../resources/view/tambah.fxml"));
         primaryStage.getScene().setRoot(newRoot);
     }
+
 }

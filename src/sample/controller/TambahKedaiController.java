@@ -2,11 +2,14 @@ package sample.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import sample.config.Connect;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -16,6 +19,12 @@ import java.text.SimpleDateFormat;
 
 public class TambahKedaiController {
     Connect dbConnect = new Connect();
+
+    @FXML
+    public ButtonBar backButton;
+
+    @FXML
+    public Button backButtonText;
 
     @FXML
     private TextField inputNamaKedai;
@@ -30,6 +39,20 @@ public class TambahKedaiController {
     private Alert warningMsg = new Alert(Alert.AlertType.WARNING);
 
     private static final SimpleDateFormat waktu = new SimpleDateFormat("MMddHHmmss");
+
+    @FXML
+    public void backClicked(MouseEvent mouseEvent) throws IOException {
+        Stage primaryStage = (Stage) backButton.getScene().getWindow();
+        Parent newRoot = FXMLLoader.load(getClass().getResource("../resources/view/tambah.fxml"));
+        primaryStage.getScene().setRoot(newRoot);
+    }
+
+    @FXML
+    public void backTextClicked(ActionEvent actionEvent) throws IOException {
+        Stage primaryStage = (Stage) backButtonText.getScene().getWindow();
+        Parent newRoot = FXMLLoader.load(getClass().getResource("../resources/view/tambah.fxml"));
+        primaryStage.getScene().setRoot(newRoot);
+    }
 
     @FXML
     public void tambahKedaiButton(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {

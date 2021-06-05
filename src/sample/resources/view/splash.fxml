@@ -49,95 +49,95 @@
 <?import javafx.scene.text.Text?>
 
 <VBox prefHeight="530.0" prefWidth="810.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.SplashController">
-  <children>
-    <MenuBar VBox.vgrow="NEVER">
-      <menus>
-        <Menu mnemonicParsing="false" text="File">
-          <items>
-            <MenuItem mnemonicParsing="false" text="New" />
-            <MenuItem mnemonicParsing="false" text="Open…" />
-            <Menu mnemonicParsing="false" text="Open Recent" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Close" />
-            <MenuItem mnemonicParsing="false" text="Save" />
-            <MenuItem mnemonicParsing="false" text="Save As…" />
-            <MenuItem mnemonicParsing="false" text="Revert" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Preferences…" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Quit" />
-          </items>
-        </Menu>
-        <Menu mnemonicParsing="false" text="Edit">
-          <items>
-            <MenuItem mnemonicParsing="false" text="Undo" />
-            <MenuItem mnemonicParsing="false" text="Redo" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Cut" />
-            <MenuItem mnemonicParsing="false" text="Copy" />
-            <MenuItem mnemonicParsing="false" text="Paste" />
-            <MenuItem mnemonicParsing="false" text="Delete" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Select All" />
-            <MenuItem mnemonicParsing="false" text="Unselect All" />
-          </items>
-        </Menu>
-        <Menu mnemonicParsing="false" text="Help">
-          <items>
-            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
-          </items>
-        </Menu>
-      </menus>
-    </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
-      <children>
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="New" />
+                        <MenuItem mnemonicParsing="false" text="Open…" />
+                        <Menu mnemonicParsing="false" text="Open Recent" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save As…" />
+                        <MenuItem mnemonicParsing="false" text="Revert" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Preferences…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Undo" />
+                        <MenuItem mnemonicParsing="false" text="Redo" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Select All" />
+                        <MenuItem mnemonicParsing="false" text="Unselect All" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <children>
 
-            <SplitPane prefHeight="505.0" prefWidth="810.0">
-              <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="bg-splash">
-                     <children>
-                        <Button onAction="#masukClicked" fx:id="buttonMasuk" layoutX="337.0" layoutY="318.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="135.0" styleClass="btn-primary" text="Masuk" textFill="WHITE">
-                           <font>
-                              <Font name="Poppins SemiBold" size="14.0" />
-                           </font>
-                        </Button>
-                        <Group layoutX="132.0" layoutY="149.0">
-                           <children>
-                              <Polygon fill="#7a1212" layoutY="20.0" points="-132.0, 109.0, -132.0, -103.0, -92.0, 109.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-                              <Polygon fill="#7a1212" layoutY="288.0" points="-132.0, 66.0, -132.0, -103.0, 75.0, 66.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-                              <Polygon fill="#ba1414" layoutX="-49.376861572265625" layoutY="155.7353057861328" points="-2.0, -14.0, -83.3768539428711, -68.26469421386719, -83.37686157226562, 144.05450439453125" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
-                                 <effect>
-                                    <DropShadow />
-                                 </effect>
-                              </Polygon>
-                           </children>
-                        </Group>
-                        <Group layoutX="524.0" layoutY="-64.0">
-                           <children>
-                              <Polygon fill="#7a1212" layoutX="376.0" layoutY="392.0" points="-132.0, 109.0, -132.0, -103.0, -92.0, 109.0" rotate="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-                              <Polygon fill="#7a1212" layoutX="208.0" layoutY="167.0" points="-132.0, 65.0, -132.0, -103.0, 76.0, 65.0" rotate="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-                              <Polygon fill="#ba1414" layoutX="286.0" layoutY="184.0" points="-2.0, -14.0, -83.3768539428711, -68.26469421386719, -83.37686157226562, 144.05450439453125" rotate="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
-                                 <effect>
-                                    <DropShadow />
-                                 </effect>
-                              </Polygon>
-                           </children>
-                        </Group>
-                        <ImageView fitHeight="100.0" fitWidth="90.0" layoutX="350.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../img/logo.png" />
-                           </image>
-                        </ImageView>
-                        <Text fill="#ba1414" layoutX="319.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-splash" text="KaBiMa">
-                           <font>
-                              <Font name="Open Sans Bold" size="45.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </AnchorPane>
-              </items>
-            </SplitPane>
-      </children>
-    </AnchorPane>
-  </children>
+                <SplitPane prefHeight="505.0" prefWidth="810.0">
+                    <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="bg-splash">
+                            <children>
+                                <Button onAction="#masukClicked" fx:id="buttonMasuk" layoutX="337.0" layoutY="318.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="135.0" styleClass="btn-primary" text="Masuk" textFill="WHITE">
+                                    <font>
+                                        <Font name="Poppins SemiBold" size="14.0" />
+                                    </font>
+                                </Button>
+                                <Group layoutX="132.0" layoutY="149.0">
+                                    <children>
+                                        <Polygon fill="#7a1212" layoutY="20.0" points="-132.0, 109.0, -132.0, -103.0, -92.0, 109.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                                        <Polygon fill="#7a1212" layoutY="288.0" points="-132.0, 66.0, -132.0, -103.0, 75.0, 66.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                                        <Polygon fill="#ba1414" layoutX="-49.376861572265625" layoutY="155.7353057861328" points="-2.0, -14.0, -83.3768539428711, -68.26469421386719, -83.37686157226562, 144.05450439453125" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                                            <effect>
+                                                <DropShadow />
+                                            </effect>
+                                        </Polygon>
+                                    </children>
+                                </Group>
+                                <Group layoutX="524.0" layoutY="-64.0">
+                                    <children>
+                                        <Polygon fill="#7a1212" layoutX="376.0" layoutY="392.0" points="-132.0, 109.0, -132.0, -103.0, -92.0, 109.0" rotate="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                                        <Polygon fill="#7a1212" layoutX="208.0" layoutY="167.0" points="-132.0, 65.0, -132.0, -103.0, 76.0, 65.0" rotate="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                                        <Polygon fill="#ba1414" layoutX="286.0" layoutY="184.0" points="-2.0, -14.0, -83.3768539428711, -68.26469421386719, -83.37686157226562, 144.05450439453125" rotate="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                                            <effect>
+                                                <DropShadow />
+                                            </effect>
+                                        </Polygon>
+                                    </children>
+                                </Group>
+                                <ImageView fitHeight="100.0" fitWidth="90.0" layoutX="350.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/logo.png" />
+                                    </image>
+                                </ImageView>
+                                <Text fill="#ba1414" layoutX="319.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-splash" text="KaBiMa">
+                                    <font>
+                                        <Font name="Open Sans Bold" size="45.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </AnchorPane>
+                    </items>
+                </SplitPane>
+            </children>
+        </AnchorPane>
+    </children>
 </VBox>

@@ -4,14 +4,17 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.control.*;
 
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import javafx.util.StringConverter;
 import sample.config.Connect;
 import sample.model.Kedai;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -21,6 +24,12 @@ import java.text.SimpleDateFormat;
 
 public class TambahProdukController {
     Connect dbConnect = new Connect();
+
+    @FXML
+    public ButtonBar backButton;
+
+    @FXML
+    public Button backButtonText;
 
     @FXML
     public TextField inputNamaProduk;
@@ -39,6 +48,20 @@ public class TambahProdukController {
 
     private static final SimpleDateFormat waktu = new SimpleDateFormat("MMddHHmmss");
     private ObservableList<Kedai> listInformation = FXCollections.observableArrayList();
+
+    @FXML
+    public void backClicked(MouseEvent mouseEvent) throws IOException {
+        Stage primaryStage = (Stage) backButton.getScene().getWindow();
+        Parent newRoot = FXMLLoader.load(getClass().getResource("../resources/view/tambah.fxml"));
+        primaryStage.getScene().setRoot(newRoot);
+    }
+
+    @FXML
+    public void backTextClicked(ActionEvent actionEvent) throws IOException {
+        Stage primaryStage = (Stage) backButtonText.getScene().getWindow();
+        Parent newRoot = FXMLLoader.load(getClass().getResource("../resources/view/tambah.fxml"));
+        primaryStage.getScene().setRoot(newRoot);
+    }
 
     @FXML
     public void tambahProdukButton(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {

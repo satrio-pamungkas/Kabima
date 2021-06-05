@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
+import java.awt.event.MouseEvent;
 import java.io.IOException;
 
 public class SplashController {
@@ -19,6 +20,5 @@ public class SplashController {
         Parent newRoot = FXMLLoader.load(getClass().getResource("../resources/view/main.fxml"));
         primaryStage.getScene().setRoot(newRoot);
     }
-
 
 }

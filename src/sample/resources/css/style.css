@@ -7,6 +7,25 @@
 }
 
 /* button */
+.bgAnchor-white {
+    -fx-background-color: #FFFFFF;
+}
+
+.bgAnchor-yellow {
+    -fx-background-color: #FEFFF1;
+}
+
+.actionbar-secondary {
+    -fx-background-color: #FEFFF1;
+    -fx-effect: dropshadow(one-pass-box, #696969, 10, 0, 0, 1);
+}
+
+.transparent-all {
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+}
+
+/* button */
 .btn-primary {
     -fx-background-color: #BA1414;
     -fx-text-fill: #FFFFFF;
@@ -42,6 +61,13 @@
     -fx-background-color: #EEF0D0;
 }
 
+.combobox-focus-primary:focused,
+.textfield-focus-primary:focused,
+.textarea-focus-primary:focused {
+    -fx-border-color: #BA1414;
+
+}
+
 /* Sidebar */
 
 .btn-sidebar {
@@ -56,7 +82,8 @@
 }
 
 /* apabila ditekan akan ada efek gerak */
-.btn-sidebar:pressed:hover {
+.btn-sidebar:pressed:hover,
+.list-produk-beranda:pressed {
     -fx-scale-y: 0.99;
     -fx-scale-x: 0.99;
 }
@@ -72,32 +99,69 @@
     -fx-fill: #BA1414;
 }
 
+/* End Splash Screen */
+
+/* Choice Produk or Kedai */
+
+.gridpane-image-text-choice {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-color-color: transparent;
+    -fx-effect: dropshadow(one-pass-box, #696969, 10, 0, 0, 0);
+
+
+}
+
+/* End Choice Produk or Kedai */
+
 /* (CREATE) addKedai FXML */
 
 .textarea-desc-tambah {
-    -fx-focus-color: #BA1414;
+    -fx-font-family: Poppins;
+
 }
 
 .textfield-ktgri-kedai-tambah,
 .textfield-nama-kedai-tambah {
+    -fx-font-family: Poppins;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #aaaaaa;
     -fx-background-radius: 8;
-    -fx-focus-color: #BA1414;
+    -fx-border-radius: 8;
 }
 
-.bgAnchor-white {
+
+
+/* END addKedai FXML */
+
+/* (CREATE) addProduk FXML */
+.combobox-kedai-tambah,
+.textfield-nama-produk-tambah,
+.textfield-harga-produk-tambah {
+    -fx-font-family: Poppins;
     -fx-background-color: #FFFFFF;
+    -fx-border-color: #aaaaaa;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+
 }
+
+
+/* END addProduk FXML */
 
 /* (READ) Beranda */
 .textfield-cari-beranda {
     -fx-background-radius: 8;
     -fx-background-color: #FFFFFF;
     -fx-border-radius: 8;
-    -fx-border-color: #696969;
+    -fx-border-color: #aaaaaa;
     -fx-effect: dropshadow(one-pass-box, #696969, 2, 0, 0, 0);
 }
 
-.textfield-cari-beranda:hover {}
+.textfield-cari-beranda:focused {
+    -fx-border-color: #BA1414;
+}
 
 .line-dotted-beranda {
     -fx-stroke-dash-array: 8;
@@ -117,11 +181,6 @@
     -fx-cursor: hand;
 }
 
-.list-produk-beranda:pressed {
-    -fx-scale-y: 0.99;
-    -fx-scale-x: 0.99;
-}
-
 .list-produk-beranda:hover {
     -fx-background-color: #EEF0D0;
     -fx-border-color: #EEF0D0;
@@ -132,3 +191,19 @@
 
 
 /* End Beranda */
+
+/* (DELETE) Kedai dan Produk */
+.line-primary {
+    -fx-stroke: #aaaaaa;
+    -fx-stroke-height: 0.5;
+}
+
+/* End (DELETE) Kedai dan Produk */
+.combobox-kedai-delete,
+.combobox-produk-delete {
+    -fx-font-family: Poppins;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #aaaaaa;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}

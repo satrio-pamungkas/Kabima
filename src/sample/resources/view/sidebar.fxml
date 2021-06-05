@@ -8,11 +8,16 @@
 <?import javafx.scene.shape.Polygon?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.effect.DropShadow?>
 
-<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" style="-fx-background-color: FEFFF1;" fx:controller="sample.controller.SidebarController" stylesheets="@../css/style.css" >
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="bgAnchor-yellow" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" style="-fx-background-color: FEFFF1;" fx:controller="sample.controller.SidebarController" stylesheets="@../css/style.css">
     <children>
         <Polygon fill="#7a1212" layoutX="132.0" layoutY="438.0" points="-132.0, 66.0, 76.0, -186.5, 76.0, 65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-        <Polygon fill="#ba1414" layoutX="131.0" layoutY="441.0" points="-132.0, 66.0, -132.0, -100.0, 76.0, 65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Polygon fill="#ba1414" layoutX="131.0" layoutY="441.0" points="-132.0, 66.0, -132.0, -100.0, 76.0, 65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+            <effect>
+                <DropShadow />
+            </effect></Polygon>
         <Text fill="#ba1414" layoutX="78.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KaBiMa">
             <font>
                 <Font name="Open Sans Bold" size="25.0" />
@@ -24,32 +29,61 @@
             </image>
         </ImageView>
         <Line endX="80.33332824707031" layoutX="109.0" layoutY="67.0" startX="-79.0" strokeWidth="0.5" />
-        <Button fx:id="buttonTambahKedai" styleClass="button-sidebar" onAction="#tambahKedaiClicked" layoutX="-11.0" layoutY="87.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="222.0" style="-fx-background-color: FEFFF1;">
-            <graphic>
-                <Text fill="#ba1414" strokeType="OUTSIDE" strokeWidth="0.0" text="Kedai" wrappingWidth="51.01858997344971">
+        <ButtonBar fx:id="buttonBeranda" onMouseClicked="#buttonBerandaClicked" layoutY="87.0" prefHeight="38.0" prefWidth="208.0" styleClass="btn-sidebar">
+            <buttons>
+                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/kedai.png" />
+                    </image>
+                </ImageView>
+                <Text fill="#ba1414" strokeType="OUTSIDE" strokeWidth="0.0" text="Beranda" wrappingWidth="135.0185899734497">
                     <font>
-                        <Font name="Open Sans SemiBold" size="15.0" />
+                        <Font name="Open Sans SemiBold" size="13.0" />
                     </font>
                 </Text>
-            </graphic>
-        </Button>
-        <Button fx:id="buttonTambahProduk" styleClass="button-sidebar" onAction="#tambahProdukClicked" layoutX="-12.0" layoutY="126.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="222.0" style="-fx-background-color: FEFFF1;">
-            <graphic>
-                <Text fill="#ba1414" strokeType="OUTSIDE" strokeWidth="0.0" text="Tambah Produk" textAlignment="RIGHT" wrappingWidth="129.01859378814697">
+            </buttons>
+        </ButtonBar>
+        <ButtonBar layoutY="125.0" prefHeight="38.0" prefWidth="208.0" styleClass="btn-sidebar">
+            <buttons>
+                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/detail-order.png" />
+                    </image>
+                </ImageView>
+                <Text fill="#ba1414" strokeType="OUTSIDE" strokeWidth="0.0" text="Keranjang" wrappingWidth="135.0185899734497">
                     <font>
-                        <Font name="Open Sans SemiBold" size="15.0" />
+                        <Font name="Open Sans SemiBold" size="13.0" />
                     </font>
                 </Text>
-            </graphic>
-        </Button>
-        <Button styleClass="button-sidebar" layoutX="-11.0" layoutY="166.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="222.0" style="-fx-background-color: FEFFF1;">
-            <graphic>
-                <Text fill="#ba1414" strokeType="OUTSIDE" strokeWidth="0.0" text="Riwayat" textAlignment="RIGHT" wrappingWidth="60.35193347930908">
+            </buttons>
+        </ButtonBar>
+        <ButtonBar fx:id="buttonTambah" onMouseClicked="#buttonTambahClicked" layoutY="163.0" prefHeight="38.0" prefWidth="208.0" styleClass="btn-sidebar">
+            <buttons>
+                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/add.png" />
+                    </image>
+                </ImageView>
+                <Text fill="#ba1414" strokeType="OUTSIDE" strokeWidth="0.0" text="Tambah" wrappingWidth="135.0185899734497">
                     <font>
-                        <Font name="Open Sans SemiBold" size="15.0" />
+                        <Font name="Open Sans SemiBold" size="13.0" />
                     </font>
                 </Text>
-            </graphic>
-        </Button>
+            </buttons>
+        </ButtonBar>
+        <ButtonBar layoutY="201.0" prefHeight="38.0" prefWidth="208.0" styleClass="btn-sidebar">
+            <buttons>
+                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/delete.png" />
+                    </image>
+                </ImageView>
+                <Text fill="#ba1414" strokeType="OUTSIDE" strokeWidth="0.0" text="Hapus" wrappingWidth="135.0185899734497">
+                    <font>
+                        <Font name="Open Sans SemiBold" size="13.0" />
+                    </font>
+                </Text>
+            </buttons>
+        </ButtonBar>
     </children>
 </AnchorPane>
