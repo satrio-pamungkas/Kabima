@@ -13,7 +13,7 @@ public class Kedai {
         this.deskripsiKedai = deskripsiKedai;
     }
 
-    public void setKodeKedai() {
+    public void setKodeKedai(String kodeKedai) {
         this.kodeKedai = kodeKedai;
     }
 
@@ -21,7 +21,7 @@ public class Kedai {
         return kodeKedai;
     }
 
-    public void setNamaKedai() {
+    public void setNamaKedai(String namaKedai) {
         this.namaKedai = namaKedai;
     }
 
@@ -29,7 +29,7 @@ public class Kedai {
         return namaKedai;
     }
 
-    public void setKategoriKedai() {
+    public void setKategoriKedai(String kategoriKedai) {
         this.kategoriKedai = kategoriKedai;
     }
 
@@ -37,7 +37,7 @@ public class Kedai {
         return kategoriKedai;
     }
 
-    public void setDeskripsiKedai() {
+    public void setDeskripsiKedai(String deskripsiKedai) {
         this.deskripsiKedai = deskripsiKedai;
     }
 

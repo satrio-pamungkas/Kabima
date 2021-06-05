@@ -85,7 +85,7 @@ public class TambahProdukController {
 
             informationMsg.setTitle("Informasi");
             informationMsg.setHeaderText(null);
-            informationMsg.setContentText("Kedai berhasil ditambahkan");
+            informationMsg.setContentText("Produk berhasil ditambahkan");
             informationMsg.showAndWait();
 
             inputNamaProduk.clear();
