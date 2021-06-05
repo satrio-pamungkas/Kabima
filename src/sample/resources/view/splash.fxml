@@ -48,7 +48,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="530.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.SplashController" stylesheets="@../css/style.css">
+<VBox prefHeight="530.0" prefWidth="810.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.SplashController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -94,9 +94,9 @@
 
             <SplitPane prefHeight="505.0" prefWidth="810.0">
               <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: FEFFF1;">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="bg-splash">
                      <children>
-                        <Button onAction="#masukClicked" id="button-masuk" fx:id="buttonMasuk" layoutX="337.0" layoutY="318.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="135.0" style="-fx-background-color: #BA1414; -fx-background-radius: 7;" text="Masuk" textFill="WHITE">
+                        <Button onAction="#masukClicked" fx:id="buttonMasuk" layoutX="337.0" layoutY="318.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="135.0" styleClass="btn-primary" text="Masuk" textFill="WHITE">
                            <font>
                               <Font name="Poppins SemiBold" size="14.0" />
                            </font>
@@ -128,7 +128,7 @@
                               <Image url="@../img/logo.png" />
                            </image>
                         </ImageView>
-                        <Text fill="#ba1414" layoutX="319.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KaBiMa">
+                        <Text fill="#ba1414" layoutX="319.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-splash" text="KaBiMa">
                            <font>
                               <Font name="Open Sans Bold" size="45.0" />
                            </font>

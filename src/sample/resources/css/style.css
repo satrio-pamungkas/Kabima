@@ -5,3 +5,130 @@
 .button-sidebar {
     -fx-cursor: hand;
 }
+
+/* button */
+.btn-primary {
+    -fx-background-color: #BA1414;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 7;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(one-pass-box, #696969, 3, 0, 0, 1);
+}
+
+.btn-primary:pressed:hover {
+    -fx-scale-y: 0.98;
+    -fx-scale-x: 0.98;
+}
+
+.btn-secondary {
+    -fx-background-color: transparent;
+    -fx-text-fill: #BA1414;
+}
+
+.btn-third-outline {
+    -fx-border-color: #EEF0D0;
+    -fx-border-radius: 13;
+    -fx-cursor: hand;
+    -fx-border-width: 1;
+}
+
+.btn-third-outline:pressed {
+    -fx-scale-y: 0.98;
+    -fx-scale-x: 0.98;
+}
+
+.btn-third-outline:hover {
+    -fx-background-radius: 13;
+    -fx-background-color: #EEF0D0;
+}
+
+/* Sidebar */
+
+.btn-sidebar {
+    -fx-cursor: hand;
+    -fx-background-color: #FEFFF1;
+    -fx-focus-color: #BA1414;
+}
+
+.btn-sidebar:focused,
+.btn-sidebar:hover {
+    -fx-background-color: #EEF0D0;
+}
+
+/* apabila ditekan akan ada efek gerak */
+.btn-sidebar:pressed:hover {
+    -fx-scale-y: 0.99;
+    -fx-scale-x: 0.99;
+}
+
+/* End Siderbar */
+
+/* Splash Screen */
+.bg-splash {
+    -fx-background-color: #FEFFF1;
+}
+
+.title-splash {
+    -fx-fill: #BA1414;
+}
+
+/* (CREATE) addKedai FXML */
+
+.textarea-desc-tambah {
+    -fx-focus-color: #BA1414;
+}
+
+.textfield-ktgri-kedai-tambah,
+.textfield-nama-kedai-tambah {
+    -fx-background-radius: 8;
+    -fx-focus-color: #BA1414;
+}
+
+.bgAnchor-white {
+    -fx-background-color: #FFFFFF;
+}
+
+/* (READ) Beranda */
+.textfield-cari-beranda {
+    -fx-background-radius: 8;
+    -fx-background-color: #FFFFFF;
+    -fx-border-radius: 8;
+    -fx-border-color: #696969;
+    -fx-effect: dropshadow(one-pass-box, #696969, 2, 0, 0, 0);
+}
+
+.textfield-cari-beranda:hover {}
+
+.line-dotted-beranda {
+    -fx-stroke-dash-array: 8;
+}
+
+.text-status-open-beranda {
+    -fx-fill: #04B800;
+    -fx-font-family: Poppins;
+}
+
+.text-status-close-beranda {
+    -fx-fill: #BA1414;
+    -fx-font-family: Poppins;
+}
+
+.list-produk-beranda {
+    -fx-cursor: hand;
+}
+
+.list-produk-beranda:pressed {
+    -fx-scale-y: 0.99;
+    -fx-scale-x: 0.99;
+}
+
+.list-produk-beranda:hover {
+    -fx-background-color: #EEF0D0;
+    -fx-border-color: #EEF0D0;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+
+}
+
+
+/* End Beranda */
