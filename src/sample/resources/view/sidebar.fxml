@@ -85,7 +85,7 @@
                 </Text>
             </buttons>
         </ButtonBar>
-        <ButtonBar layoutY="239.0" prefHeight="38.0" prefWidth="208.0" styleClass="btn-sidebar">
+        <ButtonBar fx:id="buttonEdit" onMouseClicked="#buttonEditClicked" layoutY="239.0" prefHeight="38.0" prefWidth="208.0" styleClass="btn-sidebar">
             <buttons>
                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                     <image>

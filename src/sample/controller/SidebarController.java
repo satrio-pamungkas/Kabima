@@ -22,6 +22,9 @@ public class SidebarController {
     public ButtonBar buttonHapus;
 
     @FXML
+    public ButtonBar buttonEdit;
+
+    @FXML
     public void buttonBerandaClicked(MouseEvent mouseEvent) throws IOException {
         Stage primaryStage = (Stage) buttonBeranda.getScene().getWindow();
         Parent newRoot = FXMLLoader.load(getClass().getResource("../resources/view/main.fxml"));
@@ -39,6 +42,13 @@ public class SidebarController {
     public void buttonHapusClicked(MouseEvent mouseEvent) throws IOException {
         Stage primaryStage = (Stage) buttonHapus.getScene().getWindow();
         Parent newRoot = FXMLLoader.load(getClass().getResource("../resources/view/hapus.fxml"));
+        primaryStage.getScene().setRoot(newRoot);
+    }
+
+    @FXML
+    public void buttonEditClicked(MouseEvent mouseEvent) throws IOException {
+        Stage primaryStage = (Stage) buttonEdit.getScene().getWindow();
+        Parent newRoot = FXMLLoader.load(getClass().getResource("../resources/view/edit.fxml"));
         primaryStage.getScene().setRoot(newRoot);
     }
 }

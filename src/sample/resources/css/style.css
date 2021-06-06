@@ -90,6 +90,13 @@
 
 /* End Siderbar */
 
+/* Line */
+.line-primary {
+    -fx-stroke: #aaaaaa;
+    -fx-stroke-height: 0.5;
+}
+
+/* End Line */
 /* Splash Screen */
 .bg-splash {
     -fx-background-color: #FEFFF1;
@@ -101,9 +108,10 @@
 
 /* End Splash Screen */
 
-/* Choice Produk or Kedai */
+/* Choice dan Edit Produk or Kedai */
 
-.gridpane-image-text-choice {
+.gridpane-image-text-choice,
+.gridpane-image-text-edit {
     -fx-background-color: #FFFFFF;
     -fx-background-radius: 10;
     -fx-border-radius: 10;
@@ -117,13 +125,16 @@
 
 /* (CREATE) addKedai FXML */
 
-.textarea-desc-tambah {
+.textarea-desc-tambah,
+.textarea-desc-edit {
     -fx-font-family: Poppins;
 
 }
 
 .textfield-ktgri-kedai-tambah,
-.textfield-nama-kedai-tambah {
+.textfield-nama-kedai-tambah,
+.textfield-nama-kedai-edit,
+.textfield-ktgri-kedai-edit {
     -fx-font-family: Poppins;
     -fx-background-color: #FFFFFF;
     -fx-border-color: #aaaaaa;
@@ -138,7 +149,12 @@
 /* (CREATE) addProduk FXML */
 .combobox-kedai-tambah,
 .textfield-nama-produk-tambah,
-.textfield-harga-produk-tambah {
+.textfield-harga-produk-tambah,
+.textfield-kategori-produk-tambah,
+.combobox-kedai-edit,
+.textfield-nama-produk-edit,
+.textfield-harga-produk-edit,
+.textfield-kategori-produk-edit {
     -fx-font-family: Poppins;
     -fx-background-color: #FFFFFF;
     -fx-border-color: #aaaaaa;
@@ -146,6 +162,8 @@
     -fx-border-radius: 8;
 
 }
+
+
 
 
 /* END addProduk FXML */
@@ -193,10 +211,7 @@
 /* End Beranda */
 
 /* (DELETE) Kedai dan Produk */
-.line-primary {
-    -fx-stroke: #aaaaaa;
-    -fx-stroke-height: 0.5;
-}
+
 
 /* End (DELETE) Kedai dan Produk */
 .combobox-kedai-delete,
@@ -206,4 +221,37 @@
     -fx-border-color: #aaaaaa;
     -fx-background-radius: 8;
     -fx-border-radius: 8;
+}
+
+/* Cart */
+.title-kedai-cart,
+.title-produk-cart {
+    -fx-font-family: 'Poppins Medium', sans-serif;
+    -fx-fill: black;
+    -fx-font-size: 14px;
+}
+
+.desc-cart {
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-fill: #727272;
+    -fx-font-size: 12px;
+}
+
+.harga-produk-cart,
+.count-produk-cart {
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-fill: black;
+    -fx-font-size: 12px;
+}
+
+.subtotal-produk-cart {
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-fill: black;
+    -fx-font-size: 14px;
+}
+
+.total-produk-cart {
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-fill: black;
+    -fx-font-size: 16px;
 }
