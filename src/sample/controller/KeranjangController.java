@@ -65,8 +65,7 @@ public class KeranjangController {
 
                 informationMsg.setTitle("Informasi");
                 informationMsg.setHeaderText(null);
-                informationMsg.setContentText("Keranjang berhasil dibayar");
-                informationMsg.setContentText("Kembalian = Rp." + kembalian);
+                informationMsg.setContentText("Keranjang berhasil dibayar" + "\nKembalian = Rp." + kembalian);
                 informationMsg.showAndWait();
 
                 hargaBayaran.clear();

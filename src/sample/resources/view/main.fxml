@@ -107,12 +107,7 @@
                                   <DropShadow height="21.01" radius="4.7525" width="0.0" />
                               </effect>
                               <children>
-                                  <Text layoutX="233.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit">
-                                      <font>
-                                          <Font name="Poppins Regular" size="22.0" />
-                                      </font>
-                                  </Text>
-                                  <Text fill="#ba1414" layoutX="279.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KaBiMa">
+                                  <Text fill="#ba1414" layoutX="250.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KaBiMa">
                                       <font>
                                           <Font name="Open Sans Bold" size="22.0" />
                                       </font>
@@ -132,7 +127,6 @@
                                   <DropShadow height="10.0" radius="4.5" width="10.0" />
                               </effect>
                           </Button>
-                          <ButtonBar layoutX="7.0" layoutY="72.0" prefHeight="27.0" prefWidth="93.0" styleClass="btn-third-outline" />
                           <TextField fx:id="kuantitasProduk" layoutX="50.0" layoutY="244.0" prefHeight="35.0" prefWidth="237.0" promptText="Kuantitas">
                               <cursor>
                                   <Cursor fx:constant="TEXT" />
