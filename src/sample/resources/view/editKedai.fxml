@@ -125,7 +125,7 @@
                               <Font name="Poppins Medium" size="22.0" />
                            </font>
                         </Text>
-                        <Button layoutX="373.0" layoutY="456.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="183.0" styleClass="btn-primary" text="Ubah" textFill="WHITE">
+                        <Button fx:id="editKedaiButton" onAction="#editKedaiClicked" layoutX="373.0" layoutY="456.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="183.0" styleClass="btn-primary" text="Ubah" textFill="WHITE">
                            <font>
                               <Font name="Poppins Medium" size="12.0" />
                            </font>
@@ -147,7 +147,7 @@
                               </Button>
                           </buttons>
                         </ButtonBar>
-                        <TextField layoutX="48.0" layoutY="225.0" prefHeight="35.0" prefWidth="237.0" promptText="Nama">
+                        <TextField fx:id="inputNamaKedai" layoutX="48.0" layoutY="225.0" prefHeight="35.0" prefWidth="237.0" promptText="Nama">
                            <cursor>
                               <Cursor fx:constant="TEXT" />
                            </cursor>
@@ -164,7 +164,7 @@
                               <Font name="Poppins Medium" size="12.0" />
                            </font>
                         </Text>
-                        <TextField layoutX="328.0" layoutY="225.0" prefHeight="35.0" prefWidth="237.0" promptText="Kedai">
+                        <TextField fx:id="inputKategoriKedai" layoutX="328.0" layoutY="225.0" prefHeight="35.0" prefWidth="237.0" promptText="Kategori">
                            <cursor>
                               <Cursor fx:constant="TEXT" />
                            </cursor>
@@ -181,7 +181,7 @@
                               <Font name="Poppins Medium" size="12.0" />
                            </font>
                         </Text>
-                        <TextArea layoutX="48.0" layoutY="296.0" prefHeight="135.0" prefWidth="519.0" promptText="Deskripsi" wrapText="true">
+                        <TextArea fx:id="inputDeskripsiKedai" layoutX="48.0" layoutY="296.0" prefHeight="135.0" prefWidth="519.0" promptText="Deskripsi" wrapText="true">
                            <cursor>
                               <Cursor fx:constant="TEXT" />
                            </cursor>
@@ -203,7 +203,7 @@
                               <Font name="Poppins Medium" size="12.0" />
                            </font>
                         </Text>
-                        <ComboBox layoutX="48.0" layoutY="135.0" prefHeight="35.0" prefWidth="518.0" promptText="Pilih Kedai">
+                        <ComboBox fx:id="namaKedai" layoutX="48.0" layoutY="135.0" prefHeight="35.0" prefWidth="518.0" promptText="Pilih Kedai">
                            <styleClass>
                               <String fx:value="combobox-kedai-edit" />
                               <String fx:value="combobox-focus-primary" />
