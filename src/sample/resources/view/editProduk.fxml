@@ -54,7 +54,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="530.0" prefWidth="810.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.EditProdukCOntroller">
+<VBox prefHeight="530.0" prefWidth="810.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.EditProdukController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -124,7 +124,7 @@
                               <Font name="Poppins Medium" size="22.0" />
                            </font>
                         </Text>
-                        <Button layoutX="370.0" layoutY="433.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="183.0" styleClass="btn-primary" text="Ubah" textFill="WHITE">
+                        <Button fx:id="editProdukButton" onAction="#editProdukClicked" layoutX="370.0" layoutY="433.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="183.0" styleClass="btn-primary" text="Ubah" textFill="WHITE">
                            <font>
                               <Font name="Poppins Medium" size="12.0" />
                            </font>
@@ -146,7 +146,7 @@
                               </Button>
                           </buttons>
                         </ButtonBar>
-                        <TextField layoutX="48.0" layoutY="225.0" prefHeight="35.0" prefWidth="237.0" promptText="Nama">
+                        <TextField fx:id="inputNamaProduk" layoutX="48.0" layoutY="225.0" prefHeight="35.0" prefWidth="237.0" promptText="Nama">
                            <cursor>
                               <Cursor fx:constant="TEXT" />
                            </cursor>
@@ -163,7 +163,7 @@
                               <Font name="Poppins Medium" size="12.0" />
                            </font>
                         </Text>
-                        <TextField layoutX="328.0" layoutY="225.0" prefHeight="35.0" prefWidth="237.0" promptText="Kategori">
+                        <TextField fx:id="inputKategoriProduk" layoutX="328.0" layoutY="225.0" prefHeight="35.0" prefWidth="237.0" promptText="Kategori">
                            <cursor>
                               <Cursor fx:constant="TEXT" />
                            </cursor>
@@ -190,14 +190,14 @@
                               <Font name="Poppins Medium" size="12.0" />
                            </font>
                         </Text>
-                        <ComboBox layoutX="48.0" layoutY="135.0" prefHeight="35.0" prefWidth="518.0" promptText="Pilih Kedai">
+                        <ComboBox fx:id="namaProduk" layoutX="48.0" layoutY="135.0" prefHeight="35.0" prefWidth="518.0" promptText="Pilih Produk">
                            <styleClass>
                               <String fx:value="combobox-kedai-edit" />
                               <String fx:value="combobox-focus-primary" />
                            </styleClass>
                         </ComboBox>
                         <Line endX="415.0" layoutX="149.0" layoutY="190.0" startX="-100.0" styleClass="line-primary" />
-                        <TextField layoutX="48.0" layoutY="315.0" prefHeight="35.0" prefWidth="237.0" promptText="Harga">
+                        <TextField fx:id="inputHargaProduk" layoutX="48.0" layoutY="315.0" prefHeight="35.0" prefWidth="237.0" promptText="Harga">
                            <cursor>
                               <Cursor fx:constant="TEXT" />
                            </cursor>
