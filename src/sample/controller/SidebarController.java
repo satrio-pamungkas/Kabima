@@ -23,6 +23,7 @@ public class SidebarController {
 
     @FXML
     public ButtonBar buttonEdit;
+    public ButtonBar buttonKeranjang;
 
     @FXML
     public void buttonBerandaClicked(MouseEvent mouseEvent) throws IOException {
@@ -49,6 +50,12 @@ public class SidebarController {
     public void buttonEditClicked(MouseEvent mouseEvent) throws IOException {
         Stage primaryStage = (Stage) buttonEdit.getScene().getWindow();
         Parent newRoot = FXMLLoader.load(getClass().getResource("../resources/view/edit.fxml"));
+        primaryStage.getScene().setRoot(newRoot);
+    }
+
+    public void buttonKeranjangClicked(MouseEvent mouseEvent) throws IOException {
+        Stage primaryStage = (Stage) buttonKeranjang.getScene().getWindow();
+        Parent newRoot = FXMLLoader.load(getClass().getResource("../resources/view/keranjang.fxml"));
         primaryStage.getScene().setRoot(newRoot);
     }
 }
