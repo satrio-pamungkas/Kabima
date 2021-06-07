@@ -56,7 +56,6 @@ public class HapusController {
             Kedai kedai = inputNamaKedai.getSelectionModel().getSelectedItem();
 
             String kodeKedai = kedai.getKodeKedai();
-            String namaKedai = kedai.getNamaKedai();
 
             removeKedaiFromDB(kodeKedai);
 
@@ -137,12 +136,12 @@ public class HapusController {
 
     }
 
-    public void removeKedaiFromDB(String namaKedai) {
-        String query = "DELETE FROM kedai WHERE nama_kedai = ?";
+    public void removeKedaiFromDB(String kodeKedai) {
+        String query = "DELETE FROM kedai WHERE id_kedai = ?";
 
         try (Connection conn = dbConnect.getConnection();
              PreparedStatement preparedStatement = conn.prepareStatement(query)) {
-            preparedStatement.setString(1, namaKedai);
+            preparedStatement.setString(1, kodeKedai);
 
             preparedStatement.executeUpdate();
 
