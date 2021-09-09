@@ -1,6 +1,6 @@
 # KaBiMa
 ## Deskripsi
-KaBiMa atau Kasir Bisnis Mandiri merupakan aplikasi kasir kantin berbasis desktop dengan implementasi konsep MVC. Merupakan salah satu tugas UAS mata kuliah Pemrograman Berorientasi Objek (RL209).
+KaBiMa atau Kasir Bisnis Mandiri merupakan aplikasi kasir kantin berbasis desktop (GUI) dengan implementasi konsep MVC. Merupakan salah satu tugas UAS mata kuliah Pemrograman Berorientasi Objek (RL209).
 
 ## Bahasa & Tools
 Menggunakan bahasa Java, framework GUI JavaFX, CSS, dan MySQL
