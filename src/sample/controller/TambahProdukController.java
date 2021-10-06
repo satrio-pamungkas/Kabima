@@ -81,16 +81,20 @@ public class TambahProdukController {
             int hargaProduk = Integer.parseInt(inputHargaProduk.getText());
             String kategoriProduk = inputKategoriProduk.getText();
 
-            insertToDB(kodeProduk, kodeKedai, namaProduk, hargaProduk, kategoriProduk);
+            if (validateInput(kodeProduk, kodeKedai, namaProduk, hargaProduk, kategoriProduk)) {
 
-            informationMsg.setTitle("Informasi");
-            informationMsg.setHeaderText(null);
-            informationMsg.setContentText("Produk berhasil ditambahkan");
-            informationMsg.showAndWait();
+                insertToDB(kodeProduk, kodeKedai, namaProduk, hargaProduk, kategoriProduk);
 
-            inputNamaProduk.clear();
-            inputHargaProduk.clear();
-            inputKategoriProduk.clear();
+                informationMsg.setTitle("Informasi");
+                informationMsg.setHeaderText(null);
+                informationMsg.setContentText("Produk berhasil ditambahkan");
+                informationMsg.showAndWait();
+
+                inputNamaProduk.clear();
+                inputHargaProduk.clear();
+                inputKategoriProduk.clear();
+
+            }
 
         }
 //        Kedai kedai = inputNamaKedai.getSelectionModel().getSelectedItem();
@@ -116,6 +120,38 @@ public class TambahProdukController {
                         ap.getNamaKedai().equals(s)).findFirst().orElse(null);
             }
         });
+    }
+
+    public boolean validateInput(String kodeProduk, String kodeKedai, String nama, int harga, String kategori) {
+
+        if ((nama.length() < 3) || (nama.length() > 30)) {
+            warningMsg.setTitle("Perhatian !");
+            warningMsg.setHeaderText(null);
+            warningMsg.setContentText("Nama produk tidak boleh dibawah 3 karakter dan melebihi 30 karakter");
+            warningMsg.showAndWait();
+
+            return false;
+        }
+
+        if ((kategori.length() < 3) || (kategori.length() > 30)) {
+            warningMsg.setTitle("Perhatian !");
+            warningMsg.setHeaderText(null);
+            warningMsg.setContentText("Nama kategori produk tidak boleh dibawah 3 karakter dan melebihi 30 karakter");
+            warningMsg.showAndWait();
+
+            return false;
+        }
+
+        if ((harga < 500) || (harga > 100000)) {
+            warningMsg.setTitle("Perhatian !");
+            warningMsg.setHeaderText(null);
+            warningMsg.setContentText("Harga tidak boleh dibawah Rp.500 atau diatas Rp. 100,000");
+            warningMsg.showAndWait();
+
+            return false;
+        }
+
+        return true;
     }
 
     public void insertToDB(String kodeProduk, String kodeKedai, String nama, int harga, String kategori) {
